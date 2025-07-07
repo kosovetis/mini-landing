@@ -14,9 +14,11 @@
             background-color: #f8f9fa;
             display: flex;
             justify-content: center;
-            align-items: center;
+            /* align-items: center; убрано для управления отступом */
             min-height: 100vh;
             color: #212529;
+            padding-top: 10vh; /* Уменьшенный отступ сверху */
+            box-sizing: border-box; /* Чтобы padding не влиял на общую высоту */
         }
         .container {
             text-align: center;
@@ -26,6 +28,8 @@
         .emoji-row {
             font-size: 28px;
             margin-bottom: 24px;
+        }
+        .emoji-row div {
             letter-spacing: 8px; /* Расстояние между эмоджи */
         }
         h1 {
@@ -67,10 +71,15 @@
 
     <div class="container">
         <div class="emoji-row">
-            <span>🏆</span><span>❤️</span><span>🤲</span><span>🎭</span><span>🪄</span><span>🎨</span><span>⚡️</span><span>📚</span><span>🤝</span><span>👑</span><span>🌸</span><span>🧭</span>
+            <div>
+                <span>🏆</span><span>❤️</span><span>🤲</span><span>🎭</span><span>🪄</span><span>🎨</span>
+            </div>
+            <div>
+                <span>⚡️</span><span>📚</span><span>🤝</span><span>👑</span><span>🌸</span><span>🧭</span>
+            </div>
         </div>
 
-        <h1>Какой архетип у вашего бренда?</h1>
+        <h1>Какой архетип<br>у вашего бренда?</h1>
 
         <p>Узнайте его ДНК, чтобы говорить с клиентами на одном языке и выделяться среди конкурентов.</p>
         <p>Пройдите короткий тест по системе 12 архетипов Кэрол Пирсон и получите персональный гайд по результатам.</p>
